@@ -132,26 +132,6 @@ Slack
 
 
 
----
-
-📂 Project Structure
-
-monitoring
-├── docker-compose.yml
-├── alloy
-│   └── config.alloy
-├── prometheus
-│   ├── prometheus.yml
-│   └── alerts
-│       └── node-alerts.yml
-├── grafana
-│   ├── dashboards
-│   └── provisioning
-├── loki
-│   └── loki-config.yml
-├── sample-logs
-│   └── test.log
-└── README.md
 
 
 ---

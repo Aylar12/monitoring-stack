@@ -68,11 +68,11 @@ Linux Host
 ```bash
 git clone <your-repository-url>
 cd monitoring
-```bash
+```
 2️⃣ Start the stack
-
+```bash
 docker compose up -d
-
+```
 3️⃣ Access services
 
 Service	URL

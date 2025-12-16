@@ -78,7 +78,9 @@ docker compose up -d
 Service	URL
 
 Grafana	http://localhost:3000
+
 Prometheus	http://localhost:9090
+
 Loki	http://localhost:3100
 
 
@@ -135,6 +137,7 @@ Slack
 📂 Project Structure
 
 monitoring/
+|
 ├── docker-compose.yml
 ├── alloy/
 │   └── config.alloy

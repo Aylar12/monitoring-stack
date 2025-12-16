@@ -310,7 +310,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "df75hugz9gwzkf"
+        "uid": "cf79hhb5d4tmob"
       },
       "fieldConfig": {
         "defaults": {
@@ -360,7 +360,7 @@
         {
           "datasource": {
             "type": "loki",
-            "uid": "df75hugz9gwzkf"
+            "uid": "cf79hhb5d4tmob"
           },
           "direction": "backward",
           "editorMode": "code",

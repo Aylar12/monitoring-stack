@@ -68,7 +68,7 @@ Linux Host
 ```bash
 git clone <your-repository-url>
 cd monitoring
-
+```bash
 2️⃣ Start the stack
 
 docker compose up -d
@@ -206,7 +206,3 @@ GitHub portfolio project
 Aylar
 Computer Engineer | DevOps & Monitoring Enthusiast
 
-
----
-
-⭐ If you find this project useful, feel free to star the repository!

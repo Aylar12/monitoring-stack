@@ -4,7 +4,7 @@
 A simple and static monitoring stack built with Docker Compose using **Grafana Alloy** as a unified agent for both **metrics and logs**.
 
 This project demonstrates system monitoring, log aggregation, dashboards, and alerting in a clean, reproducible way.  
-It is designed for **learning, demos, and DevOps / SRE interview presentations**.
+It is designed for **It is designed for learning and demos DevOps / SRE .**.
 
 ---
 
@@ -136,21 +136,20 @@ Slack
 
 📂 Project Structure
 
-monitoring/
-|
+monitoring
 ├── docker-compose.yml
-├── alloy/
+├── alloy
 │   └── config.alloy
-├── prometheus/
+├── prometheus
 │   ├── prometheus.yml
-│   └── alerts/
+│   └── alerts
 │       └── node-alerts.yml
-├── grafana/
-│   ├── dashboards/
-│   └── provisioning/
-├── loki/
+├── grafana
+│   ├── dashboards
+│   └── provisioning
+├── loki
 │   └── loki-config.yml
-├── sample-logs/
+├── sample-logs
 │   └── test.log
 └── README.md
 
@@ -159,8 +158,6 @@ monitoring/
 
 
 Grafana dashboard showing metrics and logs collected by Grafana Alloy.
-
-![Grafana Dashboard](./dashboard-image/grafana-dashboard.png)
 
 Below is an example Grafana dashboard showing:
 
@@ -171,6 +168,7 @@ Process memory (virtual and resident)
 Logs collected from local files via Loki
 
 
+![Grafana Dashboard](./dashboard-image/grafana-dashboard.png)
 
 
 

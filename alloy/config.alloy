@@ -1,0 +1,50 @@
+logging {
+  level = "info"
+}
+
+
+
+prometheus.exporter.unix "node" {}
+
+prometheus.scrape "alloy_scrape" {
+  targets    = prometheus.exporter.unix.node.targets
+  forward_to = [prometheus.remote_write.default.receiver]
+}
+
+prometheus.remote_write "default" {
+  endpoint {
+    url = "http://prometheus:9090/api/v1/write"
+  }
+}
+
+
+
+loki.write "local_loki" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}
+
+
+local.file_match "tmplogs" {
+  path_targets = [
+    { "__path__" = "/tmp/alloy-logs/*.log" },
+  ]
+}
+
+loki.source.file "local_files" {
+  targets    = local.file_match.tmplogs.targets
+  forward_to = [loki.write.local_loki.receiver]
+}
+
+
+local.file_match "sample_logs" {
+  path_targets = [
+    { "__path__" = "/tmp/sample-logs/*.log" },
+  ]
+}
+
+loki.source.file "local_sample_logs" {
+  targets    = local.file_match.sample_logs.targets
+  forward_to = [loki.write.local_loki.receiver]
+}

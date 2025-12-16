@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s
+
+rule_files:
+  - "alerts/*.yml"
+
+scrape_configs:
+  - job_name: "alloy"
+    static_configs:
+      - targets: ["alloy:12345"]
+      
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - "alertmanager:9093"     

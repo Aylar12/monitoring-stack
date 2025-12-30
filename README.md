@@ -9,7 +9,7 @@ It is designed for **It is designed for learning and demos DevOps / SRE .**.
 ---
 
 ##  🧱 Architecture Overview
-
+```text
 Linux Host  
 │  
 ├── Grafana Alloy  
@@ -26,7 +26,7 @@ Linux Host
     ├── Visualizes metrics (Prometheus)  
     ├── Visualizes logs (Loki)  
     └── Dashboards and alerting UI  
-
+```
 ---
 
 ##  🔧 Technologies Used
